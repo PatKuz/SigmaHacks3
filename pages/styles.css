@@ -1,0 +1,52 @@
+html {
+    overflow: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.nav {
+  font-family: 'Overpass', sans-serif;
+  font-size: 30px;
+  margin-left: 8px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+}
+
+.btns {
+  font-family: 'Overpass', sans-serif;
+  font-size:15px;
+  font-weight: lighter;
+  color: #000000;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: none;
+  padding: 20px;
+}
+
+.btns:hover {
+  transition: 0.3s;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.footer {
+  position: absolute;
+  background-color: #f0f0f0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  cursor: default;
+  padding: 6px;
+}
