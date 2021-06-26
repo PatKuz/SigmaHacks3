@@ -2,46 +2,42 @@
 
 {% block body %}
 <div style="display:flex;justify-content:center;">
-<img id="image" width="300" height="300" style="float:top;text-decoration:none;margin-bottom:5%;"/>
+  <img id="image" width="300" height="300" style="float:top;text-decoration:none;margin-bottom:-5%;" />
 </div>
 <div class="container">
 
   <form action="/upload" method="POST" enctype="multipart/form-data" style="text-align: center;">
-      <div style="display: inline;">
-        <input type="file" name="image" id="files" style="display:none;">
+    <div style="display: inline;">
+      <input type="file" name="image" id="files" style="display:none;">
 
-        <label class="btns" for="files">Browse</label>
-      </div>
+      <label class="btns" for="files">Browse</label>
+    </div>
     <div style="display:inline">
       <button type="submit" class="btns">Submit</button>
     </div>
   </form>
 </div>
 
-
-
-    {{ result }}
-
-    <div>
-      {% if result %}
-      {% if 'malignant' in result%}
-          SEE A DOCTOR
-      {% else %}
-          PROBABLY STILL SEE A DOCTOR
-      {% endif %}
-      {% endif %}
+<div>
+  {% if result %}
+  {% if 'malignant' in result%}
+  <div style="display:flex;justify-content:center;text-align:center">
+    <div style="font-family: 'Overpass', sans-serif;font-size:20px;font-weight: lighter;color: #2a0000;width:500px;">SEE A DOCTOR! Our model has determined the mole in question to be MALIGNANT. It is advised to see a medical professional as soon as possible. Here is a link to more more information regarding this matter:</div>
   </div>
-
+  {% else %}
+  <div style="display:flex;justify-content:center;text-align:center">
+    <div style="font-family: 'Overpass', sans-serif;font-size:20px;font-weight: lighter;color: #092215;width:500px;">Our model has determined that the mole in question is BENIGN. That said, we still advise seeking a medical professional for a more concrete analysis.</div>
   </div>
-      </div>
-    </div>
+  {% endif %}
+  {% endif %}
+</div>
 
-    <script typle="text/javascript">
-      document.getElementById('files').onchange = function () {
-  var src = URL.createObjectURL(this.files[0])
-  document.getElementById('image').src = src
-}
-    </script>
+<script typle="text/javascript">
+  document.getElementById('files').onchange = function() {
+    var src = URL.createObjectURL(this.files[0])
+    document.getElementById('image').src = src
+  }
+</script>
 
 
-    {% endblock %}
+{% endblock %}
