@@ -19,7 +19,7 @@ html {
 .container {
   display: flex;
   justify-content: center;
-  position: absolute;
+  margin-top: 15%;
 }
 
 .btns {

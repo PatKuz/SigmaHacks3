@@ -1,50 +1,34 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
-    <meta charset="utf-8"/>
-    <title>{% block title %}{% endblock %} S o t e r i a</title>
-    <link type="text/css" rel="stylesheet"
-            href="{{ url_for('static', filename='styles.css')}}"/>
+  <meta charset="utf-8" />
+  <title>{% block title %}{% endblock %} S o t e r i a</title>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" href="assets/favicon.ico">
 </head>
+
 <body style="background-color:#ffffff">
-    <header style="display: flex;justify-content:center;">
+  <header style="display: flex;justify-content:center;">
 
-        <a href="index.html" style="text-decoration: none;">
-          <div class="nav">S o t e r i a</div>
-        </a>
-    
-      </header>
-    
-      <hr style="color:#f0f0f0;width:25%;">
-{% block body %}{% endblock %}
+    <a href="index.html" style="text-decoration: none;">
+      <div class="nav">S o t e r i a</div>
+    </a>
 
-<div class="footer">
+  </header>
+
+  <hr style="color:#f0f0f0;width:25%;margin-bottom:5%;">
+  {% block body %}{% endblock %}
+
+  <div class="footer">
     <div style="font-family: 'Overpass',sans-serif;font-weight:100;font-size: 15px; color: #000000;padding 20px;">
-    Made by Conor Walsh, Patrick Kuzdzal, and Justin Sayah
+      Made by Conor Walsh, Patrick Kuzdzal, and Justin Sayah
     </div>
   </div>
 
-
-   <!-- jQuery -->
-   <script src="static/js/jquery-2.1.0.min.js"></script>
-
-   <!-- Bootstrap -->
-   <script src="static/js/popper.js"></script>
-   <script src="static/js/bootstrap.min.js"></script>
-
-   <!-- Plugins -->
-   <script src="static/js/owl-carousel.js"></script>
-   <script src="static/js/scrollreveal.min.js"></script>
-   <script src="static/js/waypoints.min.js"></script>
-   <script src="static/js/jquery.counterup.min.js"></script>
-   <script src="static/js/imgfix.min.js"></script>
-
-   <!-- Global Init -->
-   <script src="static/js/custom.js"></script>
-
 </body>
+
 </html>
