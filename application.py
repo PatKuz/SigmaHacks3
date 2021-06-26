@@ -21,7 +21,9 @@ def upload_image():
             image.save(os.path.join(app.config["IMAGE_UPLOADS"], 'file.jpg'))
             response = get_prediction('upload/file.jpg')
             x = response.payload
+            
             for item in response.payload:
                 result = item.display_name
-            return render_template("upload.html", result=result)
+                cert = item.classification.score
+            return render_template("upload.html", result=result,cert=cert)
     return render_template("upload.html")
