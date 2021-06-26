@@ -11,7 +11,7 @@ def test():
     return "Hello"
 
 
-@app.route('information', methods=['GET'])
+@app.route('/information', methods=['GET'])
 def info():
     return render_template('info.html')
 
