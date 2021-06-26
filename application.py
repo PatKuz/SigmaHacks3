@@ -1,5 +1,7 @@
 from flask import Flask, request, render_template
 import os
+from evaluation import get_prediction
+
 
 app = Flask(__name__)
 app.config["IMAGE_UPLOADS"] = "./upload/"
@@ -20,8 +22,9 @@ def upload_image():
     if request.method == "POST":
         if request.files:
             image = request.files["image"]
-            image.save(os.path.join(app.config["IMAGE_UPLOADS"], image.filename))
+            image.save(os.path.join(app.config["IMAGE_UPLOADS"], 'file.jpg'))
             #will call evulation
+            result = get_prediction('upload/Melanoma.jpg')
             #get result
             #delete image
             #return result

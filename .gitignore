@@ -130,3 +130,7 @@ dmypy.json
 
 #vscode QoL
 .vscode
+
+
+creds.yaml
+google_creds.json
