@@ -2,30 +2,31 @@
 <html lang='en'>
 <head>
     <meta charset="utf-8"/>
-    <title>{% block title %}{% endblock %} Soteria</title>
+    <title>{% block title %}{% endblock %} S o t e r i a</title>
     <link type="text/css" rel="stylesheet"
-            href="{{ url_for('static', filename='css/bootstrap.min.css')}}"/>
-    <link type="text/css" rel="stylesheet"
-            href="{{ url_for('static', filename='css/font-awesome.css')}}"/>
-    <link type="text/css" rel="stylesheet"
-            href="{{ url_for('static', filename='css/templatemo-lava.css')}}"/>
-    <link type="text/css" rel="stylesheet"
-            href="{{ url_for('static', filename='css/owl-carousel.css')}}"/>
+            href="{{ url_for('static', filename='styles.css')}}"/>\
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="assets/favicon.ico">
 </head>
-<body>
-    <div id="top">
-			<ul>
-			<div class="navbar">
-				<a href="{{ url_for('upload_image') }}">Upload</a>
-				<a href="{{ url_for('info') }}">Information</a>
+<body style="background-color:#ffffff">
+    <header style="display: flex;justify-content:center;">
 
-
-
-			</div>
-		  </ul>
-        </div>
-<h1>Soteria</h1>
+        <a href="index.html" style="text-decoration: none;">
+          <div class="nav">S o t e r i a</div>
+        </a>
+    
+      </header>
+    
+      <hr style="color:#f0f0f0;width:25%;">
 {% block body %}{% endblock %}
+
+<div class="footer">
+    <div style="font-family: 'Overpass',sans-serif;font-weight:100;font-size: 15px; color: #000000;padding 20px;">
+    Made by Conor Walsh, Patrick Kuzdzal, and Justin Sayah
+    </div>
+  </div>
 
 
    <!-- jQuery -->

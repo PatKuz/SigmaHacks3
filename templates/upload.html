@@ -1,6 +1,21 @@
 {% extends "master.html" %}
 
 {% block body %}
+
+<div class="container">
+  
+  <form action="/upload" method="POST" enctype="multipart/form-data" style="text-align: center;">
+      <div style="display: inline;">
+        <input type="file" name="image" id="files" style="display:none;">
+        <img id="image" />
+        <label class="btns" for="files">Browse</label>
+      </div>
+    <div style="display:inline">
+      <button type="submit" class="btns">Submit</button>
+    </div>
+  </form>
+</div>
+<!-- 
     <div class="container">
       <div class="row">
         <div class="col">
@@ -15,12 +30,19 @@
               <div class="custom-file">
                 <input type="file" class="custom-file-input" name="image"
 
-    id="image">
+    id="files">
                 <label class="custom-file-label" for="image">Select image...</label>
               </div>
             </div>
+            <img id="image" />
+
+            
     <button type="submit" class="btn btn-primary">Upload</button>
+    
     </form>
+     -->
+
+
 
     {{ result }}
 
@@ -37,6 +59,13 @@
   </div>
       </div>
     </div>
+
+    <script typle="text/javascript">
+      document.getElementById('files').onchange = function () {
+  var src = URL.createObjectURL(this.files[0])
+  document.getElementById('image').src = src
+}
+    </script>
 
 
     {% endblock %}

@@ -20,7 +20,9 @@ def info():
 @app.route('/upload', methods=['Get', 'POST'])
 def upload_image():
     if request.method == "POST":
+        print("This was called")
         if request.files:
+            print("Got the file")
             image = request.files["image"]
             image.save(os.path.join(app.config["IMAGE_UPLOADS"], 'file.jpg'))
             #will call evulation
