@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Upload Face with ID</title>
+    <title>Upload Image</title>
 </head>
 <body>
 
@@ -13,7 +13,7 @@
     <h1>Upload Image</h1>
           <hr>
 
-    <form action="/upload-image" method="POST" enctype="multipart/form-data">
+    <form action="/upload" method="POST" enctype="multipart/form-data">
 
     <div class="form-group">
               <label>Select image</label>
@@ -31,7 +31,6 @@
       </div>
     </div>
 
-    <img src="{{ uploaded_image }}">
 
 </body>
 </html>
