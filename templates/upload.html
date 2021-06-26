@@ -22,7 +22,19 @@
     <button type="submit" class="btn btn-primary">Upload</button>
     </form>
 
-        </div>
+    {{ result }}
+
+    <div>
+      {% if result %}
+      {% if 'malignant' in result%}
+          SEE A DOCTOR
+      {% else %}
+          PROBABLY STILL SEE A DOCTOR
+      {% endif %}
+      {% endif %}
+  </div>
+
+  </div>
       </div>
     </div>
 

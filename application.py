@@ -24,9 +24,14 @@ def upload_image():
             image = request.files["image"]
             image.save(os.path.join(app.config["IMAGE_UPLOADS"], 'file.jpg'))
             #will call evulation
-            result = get_prediction('upload/file.jpg')
+            response = get_prediction('upload/file.jpg')
+            print("Printing payload")
+            x = response.payload
+            for item in response.payload:
+                result = item.display_name
+            # print(result.payload)
             #get result
             #delete image
             #return result
-            return render_template("upload.html", uploaded_image=image.filename)
+            return render_template("upload.html", result=result)
     return render_template("upload.html")

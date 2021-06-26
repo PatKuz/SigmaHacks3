@@ -25,6 +25,5 @@ def get_prediction(file_path):
     print("Here 3")
     print(prediction_client.predict(request=request))
     response = prediction_client.predict(request=request)
-    print("here 4")
-    print(response.payload)
+    return response
     
