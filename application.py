@@ -24,7 +24,7 @@ def upload_image():
             image = request.files["image"]
             image.save(os.path.join(app.config["IMAGE_UPLOADS"], 'file.jpg'))
             #will call evulation
-            result = get_prediction('upload/Melanoma.jpg')
+            result = get_prediction('upload/file.jpg')
             #get result
             #delete image
             #return result
