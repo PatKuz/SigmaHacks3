@@ -19,7 +19,6 @@ html {
 .container {
   display: flex;
   justify-content: center;
-  position: absolute;
 }
 
 .btns {
