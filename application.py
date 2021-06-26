@@ -8,7 +8,7 @@ app.config["IMAGE_UPLOADS"] = "./upload/"
 
 @app.route('/')
 def test():
-    return "Hello"
+    return render_template("index.html")
 
 
 @app.route('/information', methods=['GET'])
