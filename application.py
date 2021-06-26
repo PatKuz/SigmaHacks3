@@ -10,7 +10,7 @@ app.config["IMAGE_UPLOADS"] = "./upload/"
 def test():
     return "Hello"
 
-@app.route('/upload-image', methods=['Get', 'POST'])
+@app.route('/upload', methods=['Get', 'POST'])
 def upload_image():
     if request.method == "POST":
         if request.files:
