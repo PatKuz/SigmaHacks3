@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="utf-8"/>
+    <title>{% block title %}{% endblock %} ShRek!</title>
+    <link type="text/css" rel="stylesheet"
+            href="{{ url_for('static', filename='style.css')}}"/>
+</head>
+<body>
+    <div id="top">
+			<ul>
+			<div class="navbar">
+				<a href="{{ url_for('upload_image') }}">Upload</a>
+				<a href="{{ url_for('info') }}">Information</a>
+
+
+
+			</div>
+		  </ul>
+        </div>
+<h1>Soteria</h1>
+{% block body %}{% endblock %}
+
+</body>
+</html>
